@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferando</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="fonts.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body onload="render()">
+
+    <header>
+        <div class="header-left-side">
+            <a href="/index.html"><img src="./img/lieferando-brand.svg" class="brand-logo"></a>
+        </div>
+
+        <div class="header-right-side">
+            <img src="./icons/germany.png" class="lang-icon">
+            <img src="./icons/menu.svg" id="burger-menu" onclick="popup(), showPoup()">
+        </div>
+    </header>
+
+    <div class="main-container" id="main-container">
+        <main>
+            <img src="./img/burger.avif" class="food-img">
+
+            <div class="logo-container">
+                <img src="./icons/mcd.png" class="restaurant-logo">
+            </div>
+        </main>
+
+
+        <div class="restaurant-info">
+
+            <h1>McDonald's</h1>
+            <div class="ratingContainer">
+                <div class="rating" id="rating"><img src="./icons/star.svg" alt="rating"></div>
+                <div class="comments" id="comments"></div>
+            </div>
+            <div class="delivery-info">
+                <img src="./icons/clock.svg" class="icon-basket"> Lieferung in 30min
+                <img src="./icons/shipping.svg" class="icon-basket"> 1,50€
+                <img src="./icons/bag.svg" class="icon-basket">min. 20€
+            </div>
+            <div class="food-nav-container">
+                <div class="icon-background"><img src="./icons/arrow-back.svg" class="icon-basket"
+                        onclick="rightScroll()"></div>
+                <div class="food-nav" id="food-nav"></div>
+                <div class="icon-background"><img src="./icons/arrow-forward.svg" class="icon-basket"
+                        onclick="leftScroll()"></div>
+            </div>
+
+        </div>
+
+        <div class="cards-container">
+            <h1>Beliebt</h1>
+            <div class="cards" id="cards"></div>
+        </div>
+
+        <aside>
+            <div class="basket-container">
+                <h2>Warenkorb</h2>
+                <div class="basket" id="basket">
+                </div>
+                <br><b>Gesamtpreis:</b><br>
+                <div class="sum" id="sum"></div>
+            </div>
+
+        </aside>
+    </div>
+
+    <div class="mobile-basket" id="mobile-basket">
+        <button class="mobile-basket-button" id="mobile-basket-button" onclick="showPopupBasket()">Warenkorb:</button>
+    </div>
+
+    <div class="mobile-basket-popup-background" id="mobile-basket-popup-background">
+        <div class="popup-close scale" onclick="closePopupBasket()">
+            <img src="./icons/x.svg">
+        </div>
+        <div class="mobile-basket-popup scale">
+            <div class="mobile-basket-popup-content">
+
+            </div>
+            <div id="sum-mobile-basket">
+            </div>
+            <div>
+                <a href="./order-complete.html"><button onclick="emptyBasket()">Bestellung abschließen</button></a>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

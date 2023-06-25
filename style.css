@@ -1,0 +1,499 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    box-shadow: 0px 12px 7px -8px rgba(0, 0, 0, 0.15);
+    z-index: 8;
+    background-color: white;
+}
+
+.lang-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.header-right-side {
+    display: inherit;
+    align-items: center;
+    gap: 32px;
+}
+
+main {
+    position: relative;
+}
+
+.food-img {
+    height: 320px;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-container {
+    display: block;
+    width: calc(100% - 300px);
+}
+
+.basket-container {
+    position: fixed;
+    top: 84px;
+    right: 0;
+    width: 280px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: "Open Sans", sans-serif;
+}
+
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.logo-container {
+    background-color: white;
+    position: absolute;
+    left: 70px;
+    bottom: -16px;
+    border-radius: 16px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    box-shadow: -8px 3px 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-logo {
+    width: 80px;
+}
+
+.restaurant-info {
+    padding: 64px;
+    box-shadow: -8px 3px 8px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.food-nav {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+.food-nav-inline {
+    display: inline-block;
+    padding: 8px;
+}
+
+
+.food-nav a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 16;
+}
+
+.food-nav-inline:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+    border-radius: 16px;
+}
+
+.food-nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.ratingContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.delivery-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.cards-container {
+    padding: 64px;
+}
+
+.cards {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card {
+    padding: 8px;
+    box-shadow: -8px 3px 8px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+
+.card:hover {
+    cursor: pointer;
+    scale: 1.02;
+    background-color: rgb(226, 226, 226);
+    transition: 50ms scale ease-in-out;
+
+}
+
+.card-img {}
+
+.plus {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.plus:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.basket {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    animation: 225ms appear ease-in-out;
+}
+
+.icon-basket {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-basket:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.icon-background {
+    background-color: white;
+}
+
+.addNotes {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.note-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 8px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.note-input img {
+    width: 20px;
+    height: 20px;
+}
+
+.changeNote {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgb(238, 155, 0);
+    border-radius: 16px;
+    border: 0;
+    padding: 12px;
+}
+
+button:hover {
+    scale: 1.1;
+    transition: 50ms scale ease-in-out;
+    cursor: pointer;
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: 200ms appear ease-in-out;
+}
+
+@keyframes appear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 100;
+        }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    margin-top: -300px;
+    /* Negative half of height. */
+    margin-left: -250px;
+    /* Negative half of width. */
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.popup img {
+    align-self: flex-start;
+    justify-self: right;
+
+}
+
+.popup-input {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: content-box;
+}
+
+.popup-input input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    height: 24px;
+    padding-right: 8px;
+    padding-left: 8px;
+    text-align: center;
+}
+
+.popup-input input::placeholder {
+    text-align: center;
+}
+
+.popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 16px;
+}
+
+.popup-close:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.show {
+    display: flex;
+}
+
+#burger-menu {
+    cursor: pointer;
+}
+
+#burger-menu:hover {
+    scale: 1.1;
+}
+
+.warning {
+    font-family: 'Open Sans', sans-serif;
+    color: red;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@media (max-width: 820px) {
+    aside {
+        display: none;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .cards-container {
+        padding: 10px;
+    }
+
+    .restaurant-info {
+        padding: 10px;
+    }
+
+    .mobile-basket {
+        display: flex;
+    }
+
+    .popup {
+        width: 300px;
+        height: 300px;
+        margin-top: -200px;
+        /* Negative half of height. */
+        margin-left: -150px;
+        /* Negative half of width. */
+    }
+
+    .card-content {
+        font-size: 0.9em;
+        text-align: justify;
+        text-align-last: none;
+    }
+
+    .order-complete-container h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 820px) {
+
+    .mobile-basket {
+        display: none;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .food-card-img {
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+
+.mobile-basket {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    position: fixed;
+}
+
+.mobile-basket-button {
+    display: flex;
+    align-items: center;
+}
+
+#mobile-basket-button:hover {
+    scale: 1.1;
+}
+
+.hidden {
+    display: none;
+}
+
+.order-complete-container {
+    height: calc(100vh - 87px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.complete-container {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255 128 0 / 20%);
+    border-radius: 16px;
+}
+
+.mobile-basket-popup-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    display: none;
+}
+
+.mobile-basket-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.mobile-basket-popup {
+    
+        position: fixed;
+        top: 10%;
+        width: 100%;
+        background-color: white;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+}
+
+.scale {
+    scale: 1.1;    
+}
+
+.hide {
+    display: none;
+}
+
+.show-mobile-basket {
+    display: flex;
+}
+
+#sum-mobile-basket {
+    font-size: larger;
+    font-weight: 800;
+    margin-bottom: 36px;
+    margin-top: 36px;;
+}
