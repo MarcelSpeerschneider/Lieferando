@@ -123,7 +123,7 @@ function renderCards() {
                     </div>
                 <h3>${foodCard['foodname']}</h1>
                 ${foodCard['description']}
-                <h4>${foodCard['price']} €</h4>
+                <h4>${foodCard['price'].toFixed(2).replace('.',',')} €</h4>
             </div>
             <img src="${foodCard['img']}" title="Produkt hinzufügen" class="food-card-img">
 
@@ -173,7 +173,7 @@ function showBasket() {
                 <tr>
                      <td><b>${amount}</b></td>
                      <td>${foodname}</td>
-                    <td>${price} €</td><td><img src="./icons/plus.svg" class="icon-basket" onclick="addAmount(${i})"><img src="./icons/minus.svg" class="icon-basket" onclick="reduceAmount(${i})"></td>
+                    <td>${price.toFixed(2).replace('.',',')} €</td><td><img src="./icons/plus.svg" class="icon-basket" onclick="addAmount(${i})"><img src="./icons/minus.svg" class="icon-basket" onclick="reduceAmount(${i})"></td>
                  </tr>
                 <tr>
                 <td></td><td class="addNotes" onclick="addNotesInput(${i})" id="addNotesButton${i}">Anmerkung hinzufügen</td>
@@ -231,7 +231,7 @@ function sumPrices() {
             sum = (price * amount) + sum;
         }
 
-        sum = sum.toFixed(2);
+        sum = sum.toFixed(2).replace('.',',');
 
         sumContainer.innerHTML = /* html */ `
         
